@@ -3,24 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FAQ Accordion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .faq-title {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        .faq-title h2 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+        .faq-content {
+            flex: 2;
+            padding: 20px;
+        }
+        .accordion {
+            border-top: 1px solid #ddd;
+        }
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            font-size: 16px;
+            color: #555;
+        }
+        .accordion-header .icon {
+            font-size: 24px;
+        }
+        .active .accordion-content {
+            display: block;
+        }
+        .active .icon::before {
+            content: "-";
+            color: aqua;
+            font-size: 30px;
+        }
+        .icon::before {
+            content: "+";
+            color: aqua;
+            font-size: 26px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .faq-title, .faq-content {
+                flex: none;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section class="section">
-        <h2>World-class marketing teams trust Jasper</h2>
-    </section>
-    <div class="marquee-container">
-        <div class="marquee-track">
-            <img src="img/sponsor.svg" alt="">
-            <img src="img/sponsor.svg" alt="">
-            <img src="img/sponsor.svg" alt="">
-            <img src="img/sponsor.svg" alt="">
-            <img src="img/sponsor.svg" alt="">
-            <img src="img/sponsor.svg" alt="">
-            <img src="img/sponsor.svg" alt="">
-            <img src="img/sponsor.svg" alt="">
+    <div class="container">
+        <div class="faq-title">
+            <h2>FAQs</h2>
+        </div>
+        <div class="faq-content">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>What is Vozia?</span>
+                        <span class="icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p> Vozia is an AI-powered platform that converts text into high-quality audiobooks and 
+                            summaries, designed for students and professionals. </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>How does Vozia generate AI voices? </span>
+                        <span class="icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p> We integrate advanced AI models like Eleven Labs and Whisper to create lifelike, 
+                            customizable voices. </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Can I customize the AI-generated voice? </span>
+                        <span class="icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! Choose from multiple voices, adjust speed, and select different languages for 
+                            personalized listening.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>What file formats are supported? span>
+                        <span class="icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>You can upload PDFs, text files, and Word documents, with outputs available in MP3, 
+                            WAV, and FLAC.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        function toggleAccordion(element) {
+            let item = element.parentElement;
+            let isActive = item.classList.contains("active");
+            document.querySelectorAll(".accordion-item").forEach(i => i.classList.remove("active"));
+            if (!isActive) {
+                item.classList.add("active");
+            }
+        }
+    </script>
 </body>
 </html>
