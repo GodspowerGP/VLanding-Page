@@ -4,149 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ Accordion</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            display: flex;
-            flex-direction: row;
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .faq-title {
-            flex: 1;
-            padding: 20px;
-            text-align: center;
-        }
-        .faq-title h2 {
-            font-size: 30px;
-            font-weight: bold;
-            color: #333;
-        }
-        .faq-content {
-            flex: 2;
-            padding: 20px;
-        }
-        .accordion {
-            border-top: 1px solid #ddd;
-        }
-        .accordion-item {
-            border-bottom: 1px solid #ddd;
-        }
-        .accordion-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 15px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: left;
-            cursor: pointer;
-            outline: none;
-        }
-        .accordion-content {
-            display: none;
-            padding: 15px;
-            font-size: 16px;
-            color: #555;
-        }
-        .accordion-header .icon {
-            font-size: 24px;
-        }
-        .active .accordion-content {
-            display: block;
-        }
-        .active .icon::before {
-            content: "-";
-            color: aqua;
-            font-size: 30px;
-        }
-        .icon::before {
-            content: "+";
-            color: aqua;
-            font-size: 26px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            .faq-title, .faq-content {
-                flex: none;
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <div class="container">
-        <div class="faq-title">
-            <h2>FAQs</h2>
-        </div>
-        <div class="faq-content">
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>What is Vozia?</span>
-                        <span class="icon"></span>
-                    </button>
-                    <div class="accordion-content">
-                        <p> Vozia is an AI-powered platform that converts text into high-quality audiobooks and 
-                            summaries, designed for students and professionals. </p>
-                    </div>
+    <section data-theme="inherit" class="solutions_wrap">
+        <div data-padding-bottom="large" data-padding-top="large" class="solutions_contain u-container">
+          <div data-solutions-swiper="target" class="slider-solutions_component u-vflex-center-center">
+            <div class="flex vertical align-center">
+              <div class="heading_main_content u-vflex-center-center u-text-align-center">
+                <h2 id="" class="pill">
+                  <img src="https://cdn.prod.website-files.com/60e5f2de011b86acebc30db7/67214754181d06b86e245572_Solutions%20By%20Role.svg" loading="lazy" alt="" class="pill-icon">
+                  <div>Solutions by Role</div>
+                </h2>
+                <div style="max-width: none;" class="title_wrap u-text-h2">
+                  <div class="headline xl balanced line-height-100">Solutions for</div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>How does Vozia generate AI voices? </span>
-                        <span class="icon"></span>
-                    </button>
-                    <div class="accordion-content">
-                        <p> We integrate advanced AI models like Eleven Labs and Whisper to create lifelike, 
-                            customizable voices. </p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>Can I customize the AI-generated voice? </span>
-                        <span class="icon"></span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Yes! Choose from multiple voices, adjust speed, and select different languages for 
-                            personalized listening.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>What file formats are supported? span>
-                        <span class="icon"></span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>You can upload PDFs, text files, and Word documents, with outputs available in MP3, 
-                            WAV, and FLAC.</p>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="slider-titles_component">
+              <div class="swiper is-slider-titles w-dyn-list swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <div role="list" class="swiper-wrapper is-slider-titles w-dyn-items" id="swiper-wrapper-713552682392f5ad" aria-live="polite">
+                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item swiper-slide-prev" aria-label="1 / 6" data-swiper-slide-index="0">
+                    <div class="slide_title">Product Marketers</div>
+                  </div>
+                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item is-active" aria-label="2 / 6" data-swiper-slide-index="1">
+                    <div class="slide_title">Content Marketers</div>
+                  </div>
+                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item swiper-slide-next" aria-label="3 / 6" data-swiper-slide-index="2">
+                    <div class="slide_title">Performance Marketers</div>
+                  </div>
+                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item" aria-label="4 / 6" data-swiper-slide-index="3">
+                    <div class="slide_title">Field Marketers</div>
+                  </div>
+                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item" aria-label="5 / 6" data-swiper-slide-index="4">
+                    <div class="slide_title">Brand Marketers</div>
+                  </div>
+                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item" aria-label="6 / 6" data-swiper-slide-index="5">
+                    <div class="slide_title">PR &amp; Communications</div>
+                  </div>
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+              </div>
+            </div>
+            <div class="slider-content_component u-vflex-center-top">
+              <div class="slider-solutions_controls">
+                <a href="#" class="slider-solutions_button swiper-prev w-inline-block" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-a8f855d5cce674910">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 7 12" fill="none" class="slider_button_icon">
+                    <path d="M6.18604 0.633057L0.901484 5.91761L6.18604 11.2022" stroke="currentColor" stroke-width="0.960827"></path>
+                  </svg>
+                </a>
+                <a href="#" class="slider-solutions_button swiper-next w-inline-block" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-a8f855d5cce674910">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 7 12" fill="none" class="slider_button_icon is-reversed">
+                    <path d="M6.18604 0.633057L0.901484 5.91761L6.18604 11.2022" stroke="currentColor" stroke-width="0.960827"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="swiper is-slider-content w-dyn-list swiper-creative swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
+                <div role="list" class="swiper-wrapper is-slider-content w-dyn-items" id="swiper-wrapper-a8f855d5cce674910" aria-live="polite">
+                  <div role="group" class="swiper-slide is-slider-content w-dyn-item swiper-slide-next" aria-label="3 / 6" data-swiper-slide-index="2">
+                    <div class="slider_content_inner u-vflex-center-center u-gap-medium">
+                      <p class="slider_content_text u-text-main">Embrace next-gen ABM and get to pipeline targets faster with a level of personalization and scale previously thought impossible.</p>
+                      <div class="btn_tertiary_wrap">
+                        <div class="btn_tertiary_text u-hflex-left-center">
+                          <div>Solutions for</div>
+                          <div>Performance Marketers</div>
+                        </div>
+                        <div class="link-arrow w-embed">
+                          <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.96 10.6589L3.968 9.65089L7.184 6.51489H0V5.12289H7.152L3.952 1.98689L4.96 0.962891L9.84 5.82689L4.96 10.6589Z" fill="currentcolor"></path>
+                          </svg>
+                        </div>
+                        <div class="g_clickable_wrap u-cover-absolute-5 u-radius-inherit-3 u-zindex-3-3">
+                          <a target="" href="/solutions/by-role/performance-marketers" class="g_clickable_link u-cover-absolute-5 u-radius-inherit-3 u-display-block-3 w-inline-block">
+                            <span class="g_clickable_text u-sr-only-3"></span>
+                          </a>
+                          <button type="button" class="g_clickable_btn u-cover-absolute-5 u-radius-inherit-3 u-display-none-3">
+                            <span class="g_clickable_text u-sr-only-3"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider_visual">
+                      <div class="slider_ui_abstraction is-left">
+                        <img src="https://cdn.prod.website-files.com/60e5f2de011b865a06c30ddd/6710c87d6312f1cfdb3cdfab_ABM%201-%20Ad%20Campaign.svg" loading="lazy" alt="">
+                      </div>
+                      <div class="slider_ui_abstraction is-right">
+                        <img src="https://cdn.prod.website-files.com/60e5f2de011b865a06c30ddd/6710c8823ff4a5f723e3da3a_ABM%202-%20Multichannel%20Campaign.svg" loading="lazy" alt="">
+                      </div>
+                      <div class="slider_image">
+                        <div class="g_visual_wrap u-cover-absolute-4">
+                          <img src="https://cdn.prod.website-files.com/60e5f2de011b865a06c30ddd/670f7f368ac198191e6f50e2_Performance.avif" loading="lazy" alt="" class="g_visual_img u-cover-absolute">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Repeat similar structure for other slides -->
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+              </div>
+            </div>
+            <div class="slider-bg_component u-cover-absolute">
+              <div class="slider-bg_overlay u-cover-absolute"></div>
+              <div class="swiper is-slider-bg w-dyn-list swiper-creative swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress swiper-thumbs">
+                <div role="list" class="swiper-wrapper is-slider-bg w-dyn-items" id="swiper-wrapper-bec2a52e4fcd6837" aria-live="polite">
+                  <!-- Background slides go here -->
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <script>
-        function toggleAccordion(element) {
-            let item = element.parentElement;
-            let isActive = item.classList.contains("active");
-            document.querySelectorAll(".accordion-item").forEach(i => i.classList.remove("active"));
-            if (!isActive) {
-                item.classList.add("active");
-            }
-        }
-    </script>
+      </section>
 </body>
 </html>
