@@ -1,55 +1,180 @@
-.swiper.is-slider-titles .swiper-slide {
-    width: auto !important;
-    will-change: font-size, letter-spacing;
-  }
-  
-  .slider-solutions_component {
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    perspective: 1000;
-  }
-  
-  .swiper.is-slider-titles .swiper-wrapper {
-    transition-timing-function: ease-out;
-  }
-  
-  .swiper_icon {
-    animation: float 3s ease-in-out infinite;
-  }
-  
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 900px;
+}
+
+/* Section Titles */
+.small-text {
+    font-size: 12px;
+    color: gray;
+}
+
+.main-title {
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Role List */
+.scroll-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.role-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 5px;
+    width: 100%;
+}
+
+.role-list::-webkit-scrollbar {
+    display: none;
+}
+
+.role-btn {
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s;
+    font-size: 20px;
+}
+
+.role-btn.active {
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.role-btn:hover {
+    color: black;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left {
+    left: -10px;
+}
+
+.right {
+    right: -10px;
+}
+
+/* Content Display */
+.content-display {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.role-title {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.role-description {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+/* Image Display */
+.image-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 350px;
+    height: 230px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.nav-buttons button {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Small Screen Adjustments */
+.small-screen {
+    display: none;
+}
+
+.small-con{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+@media (max-width: 600px) {
+    .nav-buttons {
+        display: none;
     }
-    50% {
-      transform: translateY(-20px);
+
+    .small-screen {
+        display: flex;
     }
-  }
-  
-  /* Apply different animation delays to stagger the icons */
-  .swiper_icon:nth-child(1) {
-    animation-delay: 0s;
-  }
-  
-  .swiper_icon:nth-child(2) {
-    animation-delay: 0.5s;
-  }
-  
-  .swiper_icon:nth-child(3) {
-    animation-delay: 1s;
-  }
-  
-  .swiper_icon:nth-child(4) {
-    animation-delay: 1.5s;
-  }
-  
-  .swiper_icon:nth-child(5) {
-    animation-delay: 0.5s;
-  }
-  
-  .swiper_icon:nth-child(6) {
-    animation-delay: 1s;
-  }
+
+    .container {
+        max-width: 600px;
+    }
+    .scroll-btn {
+        display: none;
+    }
+}
+@media (max-width: 770px) {
+
+    .container {
+        max-width: 400px;
+    }
+    .role-btn.active {
+        align-items: center;
+    }
+}
+

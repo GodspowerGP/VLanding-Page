@@ -3,118 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Accordion</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <title>Solution by Role</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <section data-theme="inherit" class="solutions_wrap">
-        <div data-padding-bottom="large" data-padding-top="large" class="solutions_contain u-container">
-          <div data-solutions-swiper="target" class="slider-solutions_component u-vflex-center-center">
-            <div class="flex vertical align-center">
-              <div class="heading_main_content u-vflex-center-center u-text-align-center">
-                <h2 id="" class="pill">
-                  <img src="https://cdn.prod.website-files.com/60e5f2de011b86acebc30db7/67214754181d06b86e245572_Solutions%20By%20Role.svg" loading="lazy" alt="" class="pill-icon">
-                  <div>Solutions by Role</div>
-                </h2>
-                <div style="max-width: none;" class="title_wrap u-text-h2">
-                  <div class="headline xl balanced line-height-100">Solutions for</div>
-                </div>
-              </div>
+<body class=" flex justify-center items-center min-h-screen">
+
+    <div class=" p-6 md:p-10 rounded-lg max-w-max w-full text-center">
+        <!-- Section Title -->
+        <div class="text-sm text-gray-500">Solution by Role</div>
+        <div class="text-2xl font-bold mt-2">Solution for</div>
+
+        <!-- Scrollable Role List -->
+        <div class=" mt-4">
+
+            
+            <div id="roleContainer" class="flex overflow-x-auto space-x-4 px-4 py-2 scroll-smooth hide-scrollbar">
+                <button class="role-btn" onclick="changeContent('students', this)">Students & Researchers</button>
+                <button class="role-btn" onclick="changeContent('business', this)">Business Professionals</button>
+                <button class="role-btn" onclick="changeContent('lawyers', this)">Lawyers & Legal Experts</button>
+                <button class="role-btn" onclick="changeContent('medical', this)">Medical Professionals</button>
             </div>
-            <div class="slider-titles_component">
-              <div class="swiper is-slider-titles w-dyn-list swiper-initialized swiper-horizontal swiper-backface-hidden">
-                <div role="list" class="swiper-wrapper is-slider-titles w-dyn-items" id="swiper-wrapper-713552682392f5ad" aria-live="polite">
-                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item swiper-slide-prev" aria-label="1 / 6" data-swiper-slide-index="0">
-                    <div class="slide_title">Product Marketers</div>
-                  </div>
-                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item is-active" aria-label="2 / 6" data-swiper-slide-index="1">
-                    <div class="slide_title">Content Marketers</div>
-                  </div>
-                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item swiper-slide-next" aria-label="3 / 6" data-swiper-slide-index="2">
-                    <div class="slide_title">Performance Marketers</div>
-                  </div>
-                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item" aria-label="4 / 6" data-swiper-slide-index="3">
-                    <div class="slide_title">Field Marketers</div>
-                  </div>
-                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item" aria-label="5 / 6" data-swiper-slide-index="4">
-                    <div class="slide_title">Brand Marketers</div>
-                  </div>
-                  <div role="group" class="swiper-slide is-slider-titles w-dyn-item" aria-label="6 / 6" data-swiper-slide-index="5">
-                    <div class="slide_title">PR &amp; Communications</div>
-                  </div>
-                </div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-              </div>
-            </div>
-            <div class="slider-content_component u-vflex-center-top">
-              <div class="slider-solutions_controls">
-                <a href="#" class="slider-solutions_button swiper-prev w-inline-block" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-a8f855d5cce674910">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 7 12" fill="none" class="slider_button_icon">
-                    <path d="M6.18604 0.633057L0.901484 5.91761L6.18604 11.2022" stroke="currentColor" stroke-width="0.960827"></path>
-                  </svg>
-                </a>
-                <a href="#" class="slider-solutions_button swiper-next w-inline-block" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-a8f855d5cce674910">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 7 12" fill="none" class="slider_button_icon is-reversed">
-                    <path d="M6.18604 0.633057L0.901484 5.91761L6.18604 11.2022" stroke="currentColor" stroke-width="0.960827"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="swiper is-slider-content w-dyn-list swiper-creative swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
-                <div role="list" class="swiper-wrapper is-slider-content w-dyn-items" id="swiper-wrapper-a8f855d5cce674910" aria-live="polite">
-                  <div role="group" class="swiper-slide is-slider-content w-dyn-item swiper-slide-next" aria-label="3 / 6" data-swiper-slide-index="2">
-                    <div class="slider_content_inner u-vflex-center-center u-gap-medium">
-                      <p class="slider_content_text u-text-main">Embrace next-gen ABM and get to pipeline targets faster with a level of personalization and scale previously thought impossible.</p>
-                      <div class="btn_tertiary_wrap">
-                        <div class="btn_tertiary_text u-hflex-left-center">
-                          <div>Solutions for</div>
-                          <div>Performance Marketers</div>
-                        </div>
-                        <div class="link-arrow w-embed">
-                          <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.96 10.6589L3.968 9.65089L7.184 6.51489H0V5.12289H7.152L3.952 1.98689L4.96 0.962891L9.84 5.82689L4.96 10.6589Z" fill="currentcolor"></path>
-                          </svg>
-                        </div>
-                        <div class="g_clickable_wrap u-cover-absolute-5 u-radius-inherit-3 u-zindex-3-3">
-                          <a target="" href="/solutions/by-role/performance-marketers" class="g_clickable_link u-cover-absolute-5 u-radius-inherit-3 u-display-block-3 w-inline-block">
-                            <span class="g_clickable_text u-sr-only-3"></span>
-                          </a>
-                          <button type="button" class="g_clickable_btn u-cover-absolute-5 u-radius-inherit-3 u-display-none-3">
-                            <span class="g_clickable_text u-sr-only-3"></span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="slider_visual">
-                      <div class="slider_ui_abstraction is-left">
-                        <img src="https://cdn.prod.website-files.com/60e5f2de011b865a06c30ddd/6710c87d6312f1cfdb3cdfab_ABM%201-%20Ad%20Campaign.svg" loading="lazy" alt="">
-                      </div>
-                      <div class="slider_ui_abstraction is-right">
-                        <img src="https://cdn.prod.website-files.com/60e5f2de011b865a06c30ddd/6710c8823ff4a5f723e3da3a_ABM%202-%20Multichannel%20Campaign.svg" loading="lazy" alt="">
-                      </div>
-                      <div class="slider_image">
-                        <div class="g_visual_wrap u-cover-absolute-4">
-                          <img src="https://cdn.prod.website-files.com/60e5f2de011b865a06c30ddd/670f7f368ac198191e6f50e2_Performance.avif" loading="lazy" alt="" class="g_visual_img u-cover-absolute">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Repeat similar structure for other slides -->
-                </div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-              </div>
-            </div>
-            <div class="slider-bg_component u-cover-absolute">
-              <div class="slider-bg_overlay u-cover-absolute"></div>
-              <div class="swiper is-slider-bg w-dyn-list swiper-creative swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress swiper-thumbs">
-                <div role="list" class="swiper-wrapper is-slider-bg w-dyn-items" id="swiper-wrapper-bec2a52e4fcd6837" aria-live="polite">
-                  <!-- Background slides go here -->
-                </div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-              </div>
-            </div>
-          </div>
+
         </div>
-      </section>
+
+        <!-- Content Display -->
+        <div class=" relative mt-6 space-y-3">
+            <p id="roleDescription" class="text-gray-600">Turn textbooks, research papers, and lecture notes into engaging audio content.</p>
+            <button onclick="scrollLeft()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md px-2 py-1 border-2 text-2xl hidden md:block"><</button>
+            <button onclick="scrollRight()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md px-2 py-1 border-2 text-2xl hidden md:block">></button>
+            <p id="roleTitle" class="text-gray-500 text-lg">Solution for Students & Researchers</p>
+        </div>
+
+        <!-- Image Display -->
+        <div class="mt-6 flex flex-col items-center">
+            <img id="roleImage" src="img/profile (2).jpg" alt="Listening Professional" class="w-50 h-50 object-cover rounded-lg shadow-md">
+
+            <!-- Navigation buttons for small screens -->
+            <div class="flex space-x-4 mt-4 md:hidden">
+                <button onclick="scrollLeft()" class="bg-white text-black text-2xl px-4 py-2 rounded-md border-2"><</button>
+                <button onclick="scrollRight()" class="bg-white text-black text-2xl px-4 py-2 rounded-md border-2">></button>
+            </div>
+        </div>
+
+        <!-- Navigation buttons for large screens -->
+        
+    </div>
+
+    <script>
+        const contentData = {
+            students: {
+                title: "Solution for Students & Researchers",
+                description: "Turn textbooks, research papers, and lecture notes into engaging audio content.",
+                image: "img/profile (2).jpg"
+            },
+            business: {
+                title: "Solution for Business Professionals",
+                description: "Convert reports, emails, and documents into audio to stay informed on the move.",
+                image: "img/profile (2).jpg"
+            },
+            lawyers: {
+                title: "Solution for Lawyers & Legal Experts",
+                description: "Listen to case files, contracts, and legal documents for efficient review.",
+                image: "img/profile (2).jpg"
+            },
+            medical: {
+                title: "Solution for Medical Professionals",
+                description: "Transform medical journals, studies, and patient notes into audio for easy access.",
+                image: "img/profile (2).jpg"
+            }
+        };
+
+        const roleContainer = document.getElementById("roleContainer");
+        const roleButtons = document.querySelectorAll(".role-btn");
+        const roleTitle = document.getElementById("roleTitle");
+        const roleDescription = document.getElementById("roleDescription");
+        const roleImage = document.getElementById("roleImage");
+
+        let currentIndex = 0;
+        const roles = Object.keys(contentData);
+
+        function changeContent(role, btn = null) {
+            roleTitle.innerText = contentData[role].title;
+            roleDescription.innerText = contentData[role].description;
+            roleImage.src = contentData[role].image;
+
+            roleButtons.forEach(button => button.classList.remove("text-black", "font-bold", "text-lg"));
+            if (btn) btn.classList.add("text-black", "font-bold", "text-lg");
+
+            currentIndex = roles.indexOf(role);
+            btn.scrollIntoView({ behavior: "smooth", inline: "center" });
+        }
+
+        function scrollLeft() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = roles.length - 1;
+            }
+            changeContent(roles[currentIndex], roleButtons[currentIndex]);
+        }
+
+        function scrollRight() {
+            if (currentIndex < roles.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            changeContent(roles[currentIndex], roleButtons[currentIndex]);
+        }
+    </script>
+
+    <style>
+        .role-btn {
+            font-size: 16px;
+            color: gray;
+            transition: color 0.3s, font-size 0.3s;
+            border: none;
+            background: none;
+            white-space: nowrap;
+            padding: 5px 10px;
+        }
+        .role-btn:hover, .role-btn.active {
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+
 </body>
 </html>
