@@ -3,112 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .footer {
-            background-color: #000000;
-            padding: 40px 20px;
-        }
-        .footer-container {
-            max-width: 800px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .footer-column {
-            width: 18%;
-            min-width: 150px;
-        }
-        .footer-column h3 {
-            font-size: 14px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-        }
-        .footer-column ul li {
-            margin-bottom: 8px;
-        }
-        .footer-column ul li a {
-            text-decoration: none;
-            color: #afafaf;
-        }
-        .footer-column ul li a:hover {
-            text-decoration: underline;
-            color: #000;
-        }
-        .footer-bottom {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #6c757d;
-        }
-        .footer-bottom a {
-            text-decoration: none;
-            color: #6c757d;
-        }
-        .footer-bottom a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Legal</a></li>
-                    <li><a href="#">Cookie Settings </a></li>
+    <footer class="bg-black text-white py-10">
+        <div class="max-w-5xl mx-auto flex flex-wrap justify-between px-5">
+            <div class="w-1/2 sm:w-1/4 min-w-[150px] mb-6">
+                <h3 class="text-sm uppercase mb-3">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Jobs</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Legal</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Cookie Settings</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h3>Product</h3>
-                <ul>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Showcase</a></li>
-                    <li><a href="#">Updates</a></li>
+            <div class="w-1/2 sm:w-1/4 min-w-[150px] mb-6">
+                <h3 class="text-sm uppercase mb-3">Product</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Pricing</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Showcase</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Updates</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Blog</a></li>
+            <div class="w-1/2 sm:w-1/4 min-w-[150px] mb-6">
+                <h3 class="text-sm uppercase mb-3">Resources</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Documentation</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h3>Socials</h3>
-                <ul>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Discord</a></li>
+            <div class="w-1/2 sm:w-1/4 min-w-[150px] mb-6">
+                <h3 class="text-sm uppercase mb-3">Socials</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Twitter</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">LinkedIn</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Discord</a></li>
                 </ul>
             </div>
-            
+        </div>
+        <div class="text-center mt-6 text-gray-500 text-sm">
+            &copy; 2025 Your Company. All rights reserved.
+        </div>
     </footer>
-</body>
-</html>
-
 </body>
 </html>

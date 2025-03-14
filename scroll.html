@@ -1,0 +1,53 @@
+import { useEffect, useRef } from "react";
+
+const logos = [
+  "/logo1.png",
+  "/logo2.png",
+  "/logo3.png",
+  "/logo4.png",
+  "/logo5.png",
+];
+
+export default function MarketingSection() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scroll = () => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft += 1;
+        if (
+          scrollRef.current.scrollLeft >=
+          scrollRef.current.scrollWidth / 2
+        ) {
+          scrollRef.current.scrollLeft = 0;
+        }
+      }
+    };
+    const interval = setInterval(scroll, 30);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="flex flex-col items-center justify-center py-10 bg-gray-100">
+      <h2 className="text-2xl font-bold text-center mb-6">
+        Word Class Marketing Teams with Vozia
+      </h2>
+      <div className="relative w-full overflow-hidden">
+        <div
+          ref={scrollRef}
+          className="flex w-max space-x-10 animate-scroll"
+          style={{ whiteSpace: "nowrap" }}
+        >
+          {[...logos, ...logos].map((logo, index) => (
+            <img
+              key={index}
+              src={logo}
+              alt={`logo-${index}`}
+              className="h-16"
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

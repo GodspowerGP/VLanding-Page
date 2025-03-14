@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vozia Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .role-btn {
+            font-size: 16px;
+            color: gray;
+            transition: color 0.3s, font-size 0.3s;
+            border: none;
+            background: none;
+            white-space: nowrap;
+            padding: 5px 10px;
+        }
+        .role-btn:hover, .role-btn.active {
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Section 1: Vozia Platform -->
+    <section class="max-w-7xl md:px-12 mx-auto p-6 ">
+        <div class="flex flex-col md:flex-row justify-between items-start mt-4 space-y-4 md:space-y-0 mb-4">
+            <!-- Left content -->
+            <div class="text-left md:w-1/2 ">
+                <p class="text-gray-700 mb-3 text-lg">The Vozia platform.</p>
+                <h3 class="text-4xl font-medium text-gray-900">
+                    Automatically convert PDFs
+                </h3>
+            </div>
+            <!-- Right content -->
+            <div class="text-left md:w-1/2">
+                <p class="text-gray-600 text-xl mt-6">
+                    Smart Audio Summarization  
+                    Instantly generate concise summaries of lengthy reports, textbooks, or research papers.  Hands-Free Learning & Productivity  
+                    Absorb information while commuting, working out, or multitasking.
+                </p>
+                <!-- <button class="mt-4 px-4 py-2 border text-gray-900 font-semibold">
+                    Explore Vozia
+                </button> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Feedback Management -->
+    <section class=" py-12 px-6 md:px-12 mx-auto">
+        <h2 class="text-2xl md:text-3xl font-semibold">Put feedback management on Autopilot</h2>
+        <p class="text-xl  text-gray-600 mt-2">Powerful AI features handle as many of your manual feedback tasks as you like</p>
+        
+        <div class="grid grid-cols-1 gap-6 mt-10">
+            <article class="relative border-2 border-indigo-100 bg-indigo-50 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center md:items-start">
+                <div class="absolute bg-indigo-50 opacity-50 rounded-lg"></div>
+                <div class="relative z-10 md:w-1/2 text-left">
+                    <h3 class="text-2xl font-semibold">Feedback Discovery</h3>
+                    <p class="text-gray-700 mt-2 text-xl ">Automatically capture and deduplicate customer feedback from customer conversations</p>
+                </div>
+                <img src="https://assets.canny.io/549058370222ae5e94655e0dc23fa4fbe2b72b07/autopilot-1-ed3334ba5c9e26f9a19a15132cf59e5f.webp" alt="" class="w-full md:w-1/2 mt-4 md:mt-0 rounded-lg shadow">
+            </article>
+    
+            <!-- Two Columns for Remaining Articles -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Smart Replies -->
+                <article class="relative border-2 border-sky-100 bg-sky-50 p-6 rounded-lg shadow-md">
+                    <div class="absolute bg-sky-50 opacity-50 rounded-lg"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-semibold">Smart Replies</h3>
+                        <p class="text-gray-700 mt-2 text-xl ">Respond to feedback with clarifying questions to uncover deeper insights</p>
+                    </div>
+                    <img src="https://assets.canny.io/549058370222ae5e94655e0dc23fa4fbe2b72b07/autopilot-2-1f64c8de85e9e9ca3530e1e8100b581c.webp" 
+                         alt=""
+                         class="w-full mt-4 rounded-lg shadow">
+                </article>
+    
+                <!-- Comment Summaries -->
+                <article class="relative border-2 border-blue-100 bg-blue-50 p-6 rounded-lg shadow-md">
+                    <div class="absolute bg-blue-50 opacity-50 rounded-lg"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-semibold ">Comment Summaries</h3>
+                        <p class="text-gray-700 mt-2 text-xl ">Instantly recap lengthy feedback threads to understand core use cases</p>
+                    </div>
+                    <img src="https://assets.canny.io/549058370222ae5e94655e0dc23fa4fbe2b72b07/autopilot-3-ad30782f3dbec61cf1d44ce31253e258.webp" 
+                         alt=""
+                         class="w-full mt-4 rounded-lg shadow">
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Solution by Role -->
+    <section class="flex justify-center items-center p-6">
+        <div class=" rounded-lg max-w-max w-full text-center">
+            <!-- Section Title -->
+            <div class="text-sm text-gray-500 text-lg">Solutions by Role</div>
+            <div class="text-4xl font-normal text-gray-900 mt-2">Solutions for</div>
+
+            <!-- Scrollable Role List -->
+            <div class="mt-4">
+                <div id="roleContainer" class="flex overflow-x-auto space-x-4 px-4 py-2 scroll-smooth hide-scrollbar">
+                    <button class="role-btn text-xl font-semibold" onclick="changeContent('students', this)">Students & Researchers</button>
+                    <button class="role-btn text-xl font-semibold" onclick="changeContent('business', this)">Business Professionals</button>
+                    <button class="role-btn text-xl font-semibold" onclick="changeContent('lawyers', this)">Lawyers & Legal Experts</button>
+                    <button class="role-btn text-xl font-semibold" onclick="changeContent('medical', this)">Medical Professionals</button>
+                </div>
+            </div>
+
+            <!-- Content Display -->
+            <div class="relative mt-6 space-y-3">
+                <p id="roleDescription" class="text-gray-600 text-lg font-medium">Turn textbooks, research papers, and lecture notes into engaging audio content.</p>
+                <button onclick="scrollLeft()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md px-2 py-1 border-2 text-2xl hidden md:block"><</button>
+                <button onclick="scrollRight()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md px-2 py-1 border-2 text-2xl hidden md:block">></button>
+                <p id="roleTitle" class="text-gray-600 text-lg font-medium">Solution for Students & Researchers</p>
+            </div>
+
+            <!-- Image Display -->
+            <div class="mt-6 flex flex-col items-center">
+                <img id="roleImage" src="img/profile (2).jpg" alt="Listening Professional" class="w-50 h-50 object-cover rounded-lg shadow-md">
+
+                <!-- Navigation buttons for small screens -->
+                <div class="flex space-x-4 mt-4 md:hidden">
+                    <button onclick="scrollLeft()" class="bg-white text-black text-2xl px-4 py-2 rounded-md border-2"><</button>
+                    <button onclick="scrollRight()" class="bg-white text-black text-2xl px-4 py-2 rounded-md border-2">></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: FAQs -->
+    <section class="  flex justify-center items-center ">
+        <div class="w-full max-w-7xl  p-6 flex flex-col md:flex-row">
+            <!-- Left Section: FAQ Title -->
+            <div class="md:w-1/3 p-4">
+                <h2 class="text-4xl font-bold">FAQs</h2>
+            </div>
+            
+            <!-- Right Section: FAQ Content -->
+            <div class="md:w-2/3 space-y-4">
+                <div class=" rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 bg-gray-100 text-left" onclick="toggleAccordion(this)">
+                        <span class="text-gray-800 text-lg font-bold">What is Vozia?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content hidden p-4 bg-gray-100">
+                        <p class="text-lg">Vozia is an AI-powered platform that converts text into high-quality audiobooks and summaries, designed for students and professionals.</p>
+                    </div>
+                </div>
+                
+                <div class=" rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 bg-gray-100 text-left" onclick="toggleAccordion(this)">
+                        <span class="text-gray-800 text-lg font-bold">How does Vozia generate AI voices?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content hidden p-4 bg-gray-100">
+                        <p class="text-lg">We integrate advanced AI models like Eleven Labs and Whisper to create lifelike, customizable voices.</p>
+                    </div>
+                </div>
+                
+                <div class=" rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 bg-gray-100 text-left" onclick="toggleAccordion(this)">
+                        <span class="text-gray-800 text-lg font-bold">Can I customize the AI-generated voice?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content hidden p-4 bg-gray-100">
+                        <p class="text-lg">Yes! Choose from multiple voices, adjust speed, and select different languages for personalized listening.</p>
+                    </div>
+                </div>
+                
+                <div class=" rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 bg-gray-100 text-left" onclick="toggleAccordion(this)">
+                        <span class="text-gray-800 text-lg font-bold">What file formats are supported?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content hidden p-4 bg-gray-100">
+                        <p class="text-lg">You can upload PDFs, text files, and Word documents, with outputs available in MP3, WAV, and FLAC.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between px-5">
+            <div class="w-1/2 sm:w-1/4 min-w-[150px] mb-6">
+                <h3 class="text-xl text-white-800 uppercase mb-3">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Jobs</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Legal</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Cookie Settings</a></li>
+                </ul>
+            </div>
+            <div class="w-1/2 sm:w-1/4 min-w-[150px] mb-6">
+                <h3 class="text-xl text-white-800 uppercase mb-3">Product</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Pricing</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Showcase</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Updates</a></li>
+                </ul>
+            </div>
+            <div class="w-1/2 sm:w-1/4 min-w-[150px] mb-6">
+                <h3 class="text-xl text-white-800 uppercase mb-3">Resources</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Documentation</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                </ul>
+            </div>
+            <div class="w-1/2 sm:w-1/4 min-w-[150px] mb-6">
+                <h3 class="text-xl text-white-800 uppercase mb-3">Socials</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Twitter</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">LinkedIn</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-6 text-gray-500 text-sm">
+            &copy; 2025 Your Company. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const contentData = {
+            students: {
+                title: "Solution for Students & Researchers",
+                description: "Turn textbooks, research papers, and lecture notes into engaging audio content.",
+                image: "img/profile (2).jpg"
+            },
+            business: {
+                title: "Solution for Business Professionals",
+                description: "Convert reports, emails, and documents into audio to stay informed on the move.",
+                image: "img/profile (2).jpg"
+            },
+            lawyers: {
+                title: "Solution for Lawyers & Legal Experts",
+                description: "Listen to case files, contracts, and legal documents for efficient review.",
+                image: "img/profile (2).jpg"
+            },
+            medical: {
+                title: "Solution for Medical Professionals",
+                description: "Transform medical journals, studies, and patient notes into audio for easy access.",
+                image: "img/profile (2).jpg"
+            }
+        };
+
+        const roleContainer = document.getElementById("roleContainer");
+        const roleButtons = document.querySelectorAll(".role-btn");
+        const roleTitle = document.getElementById("roleTitle");
+        const roleDescription = document.getElementById("roleDescription");
+        const roleImage = document.getElementById("roleImage");
+
+        let currentIndex = 0;
+        const roles = Object.keys(contentData);
+
+        function changeContent(role, btn = null) {
+            roleTitle.innerText = contentData[role].title;
+            roleDescription.innerText = contentData[role].description;
+            roleImage.src = contentData[role].image;
+
+            roleButtons.forEach(button => button.classList.remove("text-black", "font-bold", "text-lg"));
+            if (btn) btn.classList.add("text-black", "font-bold", "text-lg");
+
+            currentIndex = roles.indexOf(role);
+            btn.scrollIntoView({ behavior: "smooth", inline: "center" });
+        }
+
+        function scrollLeft() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = roles.length - 1;
+            }
+            changeContent(roles[currentIndex], roleButtons[currentIndex]);
+        }
+
+        function scrollRight() {
+            if (currentIndex < roles.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            changeContent(roles[currentIndex], roleButtons[currentIndex]);
+        }
+
+        function toggleAccordion(button) {
+            let content = button.nextElementSibling;
+            let icon = button.querySelector('.icon');
+            let isOpen = !content.classList.contains("hidden");
+            
+            document.querySelectorAll(".accordion-content").forEach(c => c.classList.add("hidden"));
+            document.querySelectorAll(".icon").forEach(i => i.textContent = "+");
+            
+            if (!isOpen) {
+                content.classList.remove("hidden");
+                icon.textContent = "−";
+            }
+        }
+    </script>
+</body>
+</html>
