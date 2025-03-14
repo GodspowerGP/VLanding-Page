@@ -1,53 +1,76 @@
-import { useEffect, useRef } from "react";
-
-const logos = [
-  "/logo1.png",
-  "/logo2.png",
-  "/logo3.png",
-  "/logo4.png",
-  "/logo5.png",
-];
-
-export default function MarketingSection() {
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-    const scroll = () => {
-      if (scrollRef.current) {
-        scrollRef.current.scrollLeft += 1;
-        if (
-          scrollRef.current.scrollLeft >=
-          scrollRef.current.scrollWidth / 2
-        ) {
-          scrollRef.current.scrollLeft = 0;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsor Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
         }
-      }
-    };
-    const interval = setInterval(scroll, 30);
-    return () => clearInterval(interval);
-  }, []);
 
-  return (
-    <div className="flex flex-col items-center justify-center py-10 bg-gray-100">
-      <h2 className="text-2xl font-bold text-center mb-6">
-        Word Class Marketing Teams with Vozia
-      </h2>
-      <div className="relative w-full overflow-hidden">
-        <div
-          ref={scrollRef}
-          className="flex w-max space-x-10 animate-scroll"
-          style={{ whiteSpace: "nowrap" }}
-        >
-          {[...logos, ...logos].map((logo, index) => (
-            <img
-              key={index}
-              src={logo}
-              alt={`logo-${index}`}
-              className="h-16"
-            />
-          ))}
+        .marquee-container {
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 20%, black 80%, rgba(0, 0, 0, 0));
+            -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 20%, black 80%, rgba(0, 0, 0, 0));
+            width: 100%;
+            max-width: 1200px; /* Limit container width for consistency */
+            margin: auto;
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 4rem; /* Adjust spacing */
+            animation: marquee 20s linear infinite; /* Smooth scrolling */
+            width: max-content; /* Allow continuous scrolling */
+        }
+
+        .marquee-content img {
+            width: 200px; /* Adjust logo size */
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Adjust speed for smaller screens */
+        @media (max-width: 768px) {
+            .marquee-content {
+                animation-duration: 20s;
+            }
+            .marquee-content img {
+                width: 150px; /* Slightly smaller logos */
+            }
+        }
+    </style>
+</head>
+<section class="bg-white text-gray-900">
+    <div class="py-6 text-center">
+        <h2 class="font-medium text-xl tracking-tight mb-6 p-4">
+            Millions of sellers at over 500,000 companies beat their number with Vozia
+        </h2>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <img src="img/alt Logo.png" alt="Company 1">
+                <img src="img/Learnove Text Logo.png" alt="Company 2">
+                <img src="img/alt Logo.png" alt="Company 3">
+                <img src="img/alt Logo.png" alt="Company 4">
+                <img src="img/alt Logo.png" alt="Company 5">
+                
+                <!-- Duplicate for seamless looping -->
+                <img src="img/alt Logo.png" alt="Company 1">
+                <img src="img/Learnove Text Logo.png" alt="Company 2">
+                <img src="img/alt Logo.png" alt="Company 3">
+                <img src="img/alt Logo.png" alt="Company 4">
+                <img src="img/alt Logo.png" alt="Company 5">
+            </div>
         </div>
-      </div>
     </div>
-  );
-}
+</section>
+</html>
